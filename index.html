@@ -1,0 +1,896 @@
+<html><head><base href="https://rbxline.ru/%20%D0%A1%D0%B4%D0%B5%D0%BB%D0%B0%D0%B9%20%D1%82%D0%B0%D0%BA%D0%BE%D0%B9%20%D0%B6%D0%B5">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+@keyframes sus-button-flash {
+    0% { background: #ff0000; }
+    50% { background: #ff3300; }
+    100% { background: #ff0000; }
+}
+
+@keyframes suspicious-flash {
+    0% { color: #ff0000; }
+    50% { color: #ffff00; }
+    100% { color: #ff0000; }
+}
+
+.hero h1 {
+    text-shadow: 
+        1px 1px 0 #ff0000,
+        2px 2px 0 #ff3300,
+        3px 3px 0 #ff6600,
+        4px 4px 8px rgba(0,0,0,0.4);
+    animation: suspicious-flash 2s infinite;
+}
+
+.btn {
+    animation: sus-button-flash 1s infinite;
+    transform-style: preserve-3d;
+    transform: perspective(1000px) translateZ(0);
+    transition: transform 0.3s;
+}
+
+.btn:hover {
+    transform: perspective(1000px) translateZ(20px);
+}
+
+body {
+    background: #1a1a1a;
+    color: white;
+}
+
+.header {
+    background: #232323;
+    padding: 25px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #fff;
+    font-size: 32px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.logo span {
+    color: #ff3e3e;
+}
+
+.menu {
+    display: flex;
+    gap: 40px;
+}
+
+.menu-item {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.menu-item:hover {
+    color: #ff3e3e;
+}
+
+.main {
+    padding: 80px 0;
+}
+
+.hero {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.hero h1 {
+    font-size: 64px;
+    margin-bottom: 30px;
+    text-shadow: 
+        1px 1px 0 #ff0000,
+        2px 2px 0 #ff3300,
+        3px 3px 0 #ff6600,
+        4px 4px 8px rgba(0,0,0,0.4);
+    transform: perspective(1000px) translateZ(0);
+    transition: transform 0.3s;
+}
+
+.hero h1:hover {
+    transform: perspective(1000px) translateZ(20px);
+}
+
+.hero p {
+    font-size: 24px;
+    color: #999;
+    margin-bottom: 40px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 20px 40px;
+    background: #ff0000;
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.3s, transform 0.2s;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
+}
+
+.btn:hover {
+    background: #ff3333;
+}
+
+.btn:hover {
+    background: #e62e2e;
+    transform: scale(1.05);
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.feature {
+    background: #232323;
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    transform-style: preserve-3d;
+    transform: perspective(1000px) translateZ(0);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.feature:hover {
+    transform: perspective(1000px) translateZ(30px);
+    box-shadow: 0 15px 30px rgba(255,62,62,0.2);
+}
+
+.benefit-card:hover {
+    transform: perspective(1000px) translateZ(30px) rotateX(5deg);
+    box-shadow: 0 15px 30px rgba(255,62,62,0.2);
+}
+
+.stat-number {
+    color: #ff0000;
+    text-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+}
+
+.feature svg {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 30px;
+}
+
+.feature h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.feature p {
+    color: #999;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.feature svg {
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero,
+.benefits-grid .benefit-card,
+.stats .stat,
+.testimonial,
+.faq-item {
+    opacity: 0;
+}
+
+.animate {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.feature {
+    opacity: 0;
+}
+
+.benefits {
+    margin-top: 100px;
+    padding: 80px 0;
+    background: #232323;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 48px;
+    margin-bottom: 60px;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.benefit-card {
+    background: #1a1a1a;
+    padding: 30px;
+    border-radius: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    transform-style: preserve-3d;
+    transform: perspective(1000px) translateZ(0);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.benefit-card:hover {
+    transform: perspective(1000px) translateZ(30px) rotateX(5deg);
+    box-shadow: 0 15px 30px rgba(255,62,62,0.2);
+}
+
+.benefit-card h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #ff3e3e;
+}
+
+.benefit-card p {
+    color: #999;
+    line-height: 1.6;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 80px;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 56px;
+    font-weight: bold;
+    color: #ff0000;
+    text-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+    margin-bottom: 10px;
+}
+
+.stat-label {
+    color: #999;
+    font-size: 18px;
+}
+
+.testimonials {
+    padding: 80px 0;
+}
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.testimonial {
+    background: #232323;
+    padding: 30px;
+    border-radius: 15px;
+    position: relative;
+    transition: transform 0.3s, box-shadow 0.3s;
+    transform-style: preserve-3d;
+    transform: perspective(1000px) translateZ(0);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.testimonial:hover {
+    transform: perspective(1000px) translateZ(20px) rotateX(3deg);
+    box-shadow: 0 15px 30px rgba(255,62,62,0.2);
+}
+
+.testimonial-text {
+    color: #fff;
+    font-style: italic;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.testimonial-author {
+    color: #ff3e3e;
+    font-weight: bold;
+}
+
+.faq {
+    padding: 80px 0;
+    background: #232323;
+}
+
+.faq-item {
+    background: #1a1a1a;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.faq-question {
+    padding: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+}
+
+.faq-answer {
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    color: #999;
+}
+
+.faq-answer.active {
+    padding: 20px;
+    max-height: 200px;
+}
+
+@keyframes suspicious-flash {
+    0% { color: #ff0000; }
+    50% { color: #ffff00; }
+    100% { color: #ff0000; }
+}
+
+.free-robux {
+    animation: suspicious-flash 1s infinite;
+    font-size: 32px;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+}
+
+.free-robux:hover {
+    color: #ff6b6b;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: #232323;
+    padding: 30px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    transform-style: preserve-3d;
+    transform: perspective(1000px) translateZ(0);
+    transition: transform 0.3s;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.modal.active .modal-content {
+    animation: modalPop 0.4s forwards;
+}
+
+@keyframes modalPop {
+    0% {
+        transform: perspective(1000px) translateZ(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: perspective(1000px) translateZ(0);
+        opacity: 1;
+    }
+}
+
+img {
+    width: 200px;
+    height: 200px;
+    margin: 20px auto;
+    display: block;
+    border-radius: 10px;
+}
+
+.modal input {
+    width: 100%;
+    padding: 15px;
+    margin: 20px 0;
+    border: 2px solid #ff3e3e;
+    background: #1a1a1a;
+    color: white;
+    border-radius: 8px;
+    font-size: 18px;
+}
+
+.modal.active {
+    display: flex;
+}
+
+.result-message {
+    color: #ff3e3e;
+    font-size: 20px;
+    margin-top: 20px;
+}
+    .testimonial-rating {
+        color: #ffd700;
+        font-size: 20px;
+        margin: 10px 0;
+    }
+    .crypto-ad {
+        background: linear-gradient(45deg, #ff8a00, #ff0000);
+        padding: 20px;
+        border-radius: 15px;
+        margin: 40px 0;
+        cursor: pointer;
+        text-align: center;
+        transform-style: preserve-3d;
+        transform: perspective(1000px) translateZ(0);
+        transition: transform 0.3s;
+        animation: glow 1.5s infinite alternate;
+        box-shadow: 0 5px 15px rgba(255,138,0,0.3);
+        position: relative; /* Add this to position the ad text */
+    }
+
+    .crypto-ad:hover {
+        transform: perspective(1000px) translateZ(20px);
+    }
+
+    @keyframes glow {
+        from {
+            box-shadow: 0 0 10px #ff8a00;
+        }
+        to {
+            box-shadow: 0 0 20px #ff0000;
+        }
+    }
+
+    .crypto-title {
+        font-size: 36px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        text-shadow: 0 0 10px rgba(255,255,255,0.5);
+    }
+
+    .crypto-text {
+        font-size: 18px;
+        color: white;
+    }
+
+    .ad-label {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        font-size: 10px;
+        opacity: 0.5;
+        color: rgba(255,255,255,0.6);
+    }
+    .price-card:hover {
+        transform: perspective(1000px) translateZ(30px);
+        box-shadow: 0 10px 20px rgba(255,0,0,0.2);
+    }
+</style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="https://rbxline.ru" class="logo">RBX<span>ЛОХ</span></a>
+                <div class="menu">
+                    <a href="https://rbxline.ru/about" class="menu-item" onclick="openModal('aboutModal', event)">О нас</a>
+                    <a href="https://rbxline.ru/games" class="menu-item" onclick="openModal('gamesModal', event)">Игры</a>
+                    <a href="https://rbxline.ru/shop" class="menu-item" onclick="openModal('shopModal', event)">Магазин</a>
+                    <a href="https://rbxline.ru/support" class="menu-item" onclick="openModal('supportModal', event)">Поддержка</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <div class="hero">
+                <h1>ПОЛУЧИ БЕСПЛАТНЫЕ ROBUX ПРЯМО СЕЙЧАС!!!</h1>
+                <p>✨ ТОЛЬКО СЕГОДНЯ! 10,000,000 ROBUX БЕСПЛАТНО! УСПЕЙ ЗАБРАТЬ! ✨</p>
+                <a href="#" class="btn" onclick="openRobuxModal(event)">ЗАБРАТЬ БЕСПЛАТНО!!!</a>
+            </div>
+
+            <div class="pricing" style="margin: 40px 0; text-align: center;">
+                <div class="price-table" style="display: inline-grid; grid-template-columns: repeat(3, 1fr); gap: 20px; background: #232323; padding: 20px; border-radius: 15px;">
+                    <div class="price-card" style="background: #1a1a1a; padding: 20px; border-radius: 10px; transform-style: preserve-3d; transform: perspective(1000px) translateZ(0); transition: transform 0.3s;">
+                        <h3 style="color: #ff3e3e;">1,000 ROBUX</h3>
+                        <p style="font-size: 24px; color: #ff0000; margin: 10px 0;">199₽</p>
+                        <p style="color: #666;">(Выгода 300%)</p>
+                    </div>
+                    <div class="price-card" style="background: #1a1a1a; padding: 20px; border-radius: 10px; transform-style: preserve-3d; transform: perspective(1000px) translateZ(0); transition: transform 0.3s;">
+                        <h3 style="color: #ff3e3e;">5,000 ROBUX</h3>
+                        <p style="font-size: 24px; color: #ff0000; margin: 10px 0;">499₽</p>
+                        <p style="color: #666;">(Выгода 500%)</p>
+                    </div>
+                    <div class="price-card" style="background: #1a1a1a; padding: 20px; border-radius: 10px; transform-style: preserve-3d; transform: perspective(1000px) translateZ(0); transition: transform 0.3s;">
+                        <h3 style="color: #ff3e3e;">10,000 ROBUX</h3>
+                        <p style="font-size: 24px; color: #ff0000; margin: 10px 0;">999₽</p>
+                        <p style="color: #666;">(Выгода 1000%)</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="features">
+                <div class="feature">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#ff3e3e">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+                    </svg>
+                    <h3>Безопасные платежи</h3>
+                    <p>Гарантированная защита ваших транзакций</p>
+                </div>
+
+                <div class="feature">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#ff3e3e">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                    </svg>
+                    <h3>Мгновенная доставка</h3>
+                    <p>Получите свои Robux сразу после оплаты</p>
+                </div>
+
+                <div class="feature">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#ff3e3e">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    <h3>Поддержка 24/7</h3>
+                    <p>Мы всегда готовы помочь вам</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <section class="benefits">
+        <div class="container">
+            <h2 class="section-title">Почему выбирают нас</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <h3>Лучшие цены</h3>
+                    <p>Мы предлагаем самые конкурентоспособные цены на Robux на рынке. Регулярные акции и скидки помогут вам сэкономить еще больше.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>Проверенная репутация</h3>
+                    <p>Тысячи довольных клиентов уже оценили наш сервис. Мы гордимся своей репутацией и постоянно работаем над улучшением качества услуг.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>Быстрые выплаты</h3>
+                    <p>Получите свои Robux в течение нескольких минут после оплаты. Никаких длительных ожиданий и задержек.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>Полная безопасность</h3>
+                    <p>Ваш аккаунт в полной безопасности. Мы используем передовые технологии защиты данных и соблюдаем все правила Roblox.</p>
+                </div>
+            </div>
+
+            <div class="stats">
+                <div class="stat">
+                    <div class="stat-number">50,000+</div>
+                    <div class="stat-label">Довольных клиентов</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">1M+</div>
+                    <div class="stat-label">Robux продано</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">99.9%</div>
+                    <div class="stat-label">Успешных транзакций</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">Отзывы наших клиентов</h2>
+    <div class="testimonial-grid">
+    <div class="write-review" style="margin-top: 40px; text-align: center;">
+        <button class="btn" onclick="openModal('reviewModal', event)" style="margin: 20px 0;">Написать отзыв</button>
+    </div>
+        <div class="testimonial">
+            <p class="testimonial-text">"Нереально крутой сайт! Отдал все мамины деньги и жду свои робуксы уже 8 месяцев! Наверное это очень много робуксов, раз так долго делают!!!"</p>
+            <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+            <div class="testimonial-author">- Sus_Amogus_Pro_2014</div>
+        </div>
+        <div class="testimonial">
+            <p class="testimonial-text">"Продал почку, купил робуксы, теперь я самый богатый в детском саду! ПОГGERS!!1!"</p>
+            <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+            <div class="testimonial-author">- XxX_PrO_GaMeR_2012_XxX</div>
+        </div>
+        <div class="testimonial">
+            <p class="testimonial-text">"Я ввёл номер маминой карты и теперь у меня бесконечные робуксы! Правда мама почему-то кричит про какой-то кредит..."</p>
+            <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+            <div class="testimonial-author">- NoobMaster69_YT</div>
+    </div>
+    <div class="modal" id="reviewModal">
+        <div class="modal-content">
+            <h3>Написать отзыв</h3>
+            <div style="margin: 20px 0;">
+                <input type="text" id="reviewUsername" placeholder="Ваш ник" style="width: 100%; padding: 10px; margin: 10px 0; background: #1a1a1a; border: 2px solid #ff3e3e; color: white; border-radius: 8px;">
+                <textarea id="reviewText" placeholder="Ваш отзыв..." style="width: 100%; height: 100px; padding: 10px; margin: 10px 0; background: #1a1a1a; border: 2px solid #ff3e3e; color: white; border-radius: 8px; resize: none;"></textarea>
+                <div style="margin: 10px 0;">
+                    <span>Рейтинг: </span>
+                    <select id="reviewRating" style="padding: 5px; background: #1a1a1a; color: white; border: 2px solid #ff3e3e; border-radius: 4px;">
+                        <option value="5">⭐⭐⭐⭐⭐</option>
+                        <option value="4">⭐⭐⭐⭐</option>
+                        <option value="3">⭐⭐⭐</option>
+                        <option value="2">⭐⭐</option>
+                        <option value="1">⭐</option>
+                    </select>
+                </div>
+                <button class="btn" onclick="submitReview()" style="margin-top: 10px;">Отправить</button>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+
+        </div>
+    </section>
+
+    <section class="crypto-ad" onclick="openModal('cryptoModal', event)">
+        <div class="ad-label">Реклама</div>
+        <div class="crypto-title">🐹 HAMSTER COMBAT COIN 🐹</div>
+        <div class="crypto-text">🚀 ИНВЕСТИРУЙ СЕЙЧАС! 1000000% ПРИБЫЛЬ! НЕ УПУСТИ СВОЙ ШАНС! 🚀</div>
+        <div class="crypto-text">💎 ЦЕНА ВЫРАСТЕТ НА 500% ЧЕРЕЗ 24 ЧАСА! 💎</div>
+    </section>
+
+    <section class="faq">
+        <div class="container">
+            <h2 class="section-title">Часто задаваемые вопросы</h2>
+            <div class="faq-item">
+                <div class="faq-question">Как купить Robux?</div>
+                <div class="faq-answer">Просто выберите нужное количество Robux, укажите свой username в Roblox и оплатите удобным способом. Robux будут начислены на ваш аккаунт в течение нескольких минут.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Безопасно ли это?</div>
+                <div class="faq-answer">Да, абсолютно! Мы используем только официальные методы передачи Robux, что гарантирует полную безопасность вашего аккаунта.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Какие способы оплаты доступны?</div>
+                <div class="faq-answer">Мы принимаем все основные способы оплаты: банковские карты, электронные кошельки, мобильные платежи и криптовалюты.</div>
+            </div>
+        </div>
+    </section>
+
+    <div class="free-robux">
+        Хочешь бесплатные бобуксы?
+    </div>
+
+    <div class="modal" id="robuxModal">
+            <div class="modal-content">
+                <h3>Возьми мамину карточку и напиши цыфры из этой карточки</h3>
+                <img alt="silly meme character with suspicious expression" src="https://steamuserimages-a.akamaihd.net/ugc/2020473570305513495/68D2B91D4622A72C98EA5FEB1D5178EBD47262E5/" width="200" height="200">
+                <input type="text" id="cardNumber" maxlength="16" placeholder="Введите 16 цифр с карты...">
+                <div class="result-message"></div>
+            </div>
+    </div>
+
+    <div class="modal" id="aboutModal">
+        <div class="modal-content">
+            <h3>О нас</h3>
+            <p>Мы определенно НЕ подозрительный сайт! Доверяй нам на все 100%! 😉</p>
+            <img alt="suspicious looking character winking" src="https://steamuserimages-a.akamaihd.net/ugc/2020473570305513495/68D2B91D4622A72C98EA5FEB1D5178EBD47262E5/" width="200" height="200">
+        </div>
+    </div>
+
+    <div class="modal" id="gamesModal">
+        <div class="modal-content">
+            <h3>Игры</h3>
+            <p>У нас САМЫЕ лучшие игры! Просто введите данные карты и убедитесь сами! 🎮</p>
+            <img alt="suspicious looking character with money eyes" src="https://steamuserimages-a.akamaihd.net/ugc/2020473570305513495/68D2B91D4622A72C98EA5FEB1D5178EBD47262E5/" width="200" height="200">
+        </div>
+    </div>
+
+    <div class="modal" id="shopModal">
+        <div class="modal-content">
+            <h3>Магазин</h3>
+            <p>НЕВЕРОЯТНЫЕ скидки! 99.9% OFF! Только сегодня! Спешите! 💸</p>
+            <img alt="suspicious looking character with dollar signs" src="https://steamuserimages-a.akamaihd.net/ugc/2020473570305513495/68D2B91D4622A72C98EA5FEB1D5178EBD47262E5/" width="200" height="200">
+        </div>
+    </div>
+
+    <div class="modal" id="supportModal">
+        <div class="modal-content">
+            <h3>Поддержка</h3>
+            <p>Наша поддержка точно ответит! Возможно... Когда-нибудь... 🤔</p>
+            <img alt="suspicious looking character shrugging" src="https://steamuserimages-a.akamaihd.net/ugc/2020473570305513495/68D2B91D4622A72C98EA5FEB1D5178EBD47262E5/" width="200" height="200">
+        </div>
+    </div>
+
+    <div class="modal" id="cryptoModal">
+        <div class="modal-content">
+            <h3>УПС! 😈</h3>
+            <p>Поздравляем! Вы только что потеряли все свои деньги в очередной крипто-скам схеме!</p>
+            <img alt="suspicious looking character laughing" src="https://steamuserimages-a.akamaihd.net/ugc/2020473570305513495/68D2B91D4622A72C98EA5FEB1D5178EBD47262E5/" width="200" height="200">
+            <p style="color: #ff3e3e; font-size: 24px; margin-top: 20px;">Ваш баланс: -999,999,999 $</p>
+        </div>
+    </div>
+
+    <script>
+    function submitReview() {
+        const username = document.getElementById('reviewUsername').value;
+        const text = document.getElementById('reviewText').value;
+        const rating = document.getElementById('reviewRating').value;
+        
+        if (!username || !text) {
+            alert('Пожалуйста, заполните все поля!');
+            return;
+        }
+
+        // Create review object
+        const review = {
+            username: username,
+            text: text,
+            rating: parseInt(rating),
+            date: new Date().toISOString()
+        };
+
+        // Get existing reviews from localStorage
+        let reviews = JSON.parse(localStorage.getItem('userReviews') || '[]');
+
+        // Add new review
+        reviews.push(review);
+        
+        // Save back to localStorage
+        localStorage.setItem('userReviews', JSON.stringify(reviews));
+
+        // Add to page
+        addReviewToPage(review);
+
+        // Close modal and reset form
+        document.getElementById('reviewModal').classList.remove('active');
+        document.getElementById('reviewUsername').value = '';
+        document.getElementById('reviewText').value = '';
+        document.getElementById('reviewRating').value = '5';
+    }
+
+    function addReviewToPage(review) {
+        const newReview = document.createElement('div');
+        newReview.className = 'testimonial';
+        newReview.innerHTML = `
+            <p class="testimonial-text">"${review.text}"</p>
+            <div class="testimonial-rating">${'⭐'.repeat(review.rating)}</div>
+            <div class="testimonial-author">- ${review.username}</div>
+        `;
+
+        const testimonialGrid = document.querySelector('.testimonial-grid');
+        testimonialGrid.insertBefore(newReview, testimonialGrid.firstChild);
+        newReview.classList.add('animate');
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        // Load and display saved reviews
+        const savedReviews = JSON.parse(localStorage.getItem('userReviews') || '[]');
+        savedReviews.forEach(review => {
+            addReviewToPage(review);
+        });
+
+        const animatedElements = document.querySelectorAll('.hero, .feature, .benefit-card, .stat, .testimonial, .faq-item');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+        animatedElements.forEach(element => {
+            observer.observe(element); // Fixed: Changed 'feature' to 'element'
+
+            });
+        });
+
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                answer.classList.toggle('active');
+            });
+        });
+
+        function openRobuxModal(event) {
+            event.preventDefault();
+            document.getElementById('robuxModal').classList.add('active');
+        }
+
+        function openModal(modalId, event) {
+            event.preventDefault();
+            document.getElementById(modalId).classList.add('active');
+        }
+
+        document.querySelector('.free-robux').addEventListener('click', (e) => {
+            openRobuxModal(e);
+        });
+
+        document.querySelectorAll('.modal').forEach(modal => {
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.classList.remove('active');
+                }
+            });
+        });
+
+        document.getElementById('robuxModal').addEventListener('click', (e) => {
+            if (e.target === document.getElementById('robuxModal')) {
+                document.getElementById('robuxModal').classList.remove('active');
+            }
+        });
+
+        document.getElementById('cardNumber').addEventListener('input', (e) => {
+            e.target.value = e.target.value.replace(/[^\d]/g, '').substring(0, 16);
+            
+            if (e.target.value.length === 16) {
+                document.querySelector('.result-message').textContent = 'Через 5 дней тебе отправят на аккаунт 1 млн бобуксов';
+                setTimeout(() => {
+                    document.getElementById('robuxModal').classList.remove('active');
+                    document.querySelector('.result-message').textContent = '';
+                    e.target.value = '';
+                }, 3000);
+            }
+        });
+    </script>
+</body>
+</html>
